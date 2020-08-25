@@ -36,17 +36,19 @@
 //// within makedancer set properties of an instance
 ////// what will be inhereted by subs
 
-var MakeDancer = function(top, left, timeBetweenSteps) {
+var Dancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this.step(timeBetweenSteps);
   this.setPosition(top, left);
 };
 
-MakeDancer.prototype.step = function (timeBetweenSteps) {
-  setTimeout(this.step, timeBetweenSteps);
+Dancer.prototype.step = function (timeBetweenSteps) {
+  setTimeout(function() {
+    this.step;
+  }, timeBetweenSteps);
 };
 
-MakeDancer.prototype.setPosition = function (top, left) {
+Dancer.prototype.setPosition = function (top, left) {
   var styleSettings = {
     top: top,
     left: left
