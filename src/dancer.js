@@ -38,14 +38,14 @@
 
 var Dancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
-  this.step(timeBetweenSteps);
+  this._timeBetweenSteps = timeBetweenSteps;
+  this.step();
   this.setPosition(top, left);
 };
 
-Dancer.prototype.step = function (timeBetweenSteps) {
-  setTimeout(function() {
-    this.step;
-  }, timeBetweenSteps);
+Dancer.prototype.step = function () {
+  var context = this;
+  setTimeout(function () { context.step(); }, this._timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function (top, left) {
