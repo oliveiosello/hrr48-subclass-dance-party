@@ -14,21 +14,33 @@ body{
 
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color:#7b1005;
 }
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+  Align-items: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
+
+.title:hover{
+  color: #a17a04
+}
+
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: #8c8774;
 }
 .title{
-  background-color: #777;
+  background-color: #8c8774;
 }
 .dancer{
   border:10px solid blue;
-  border-radius:10px;
   position:absolute;
+  cursor: pointer;
+  transition-duration: 0.1s
+}
+.dancer:hover {
+  color: red
 }
