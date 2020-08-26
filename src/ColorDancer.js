@@ -8,5 +8,5 @@ ColorDancer.prototype.constructor = ColorDancer;
 
 ColorDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
-  // this.$node.*WHAT DO WE WANT*;
+  this.$node.bounce();
 };
